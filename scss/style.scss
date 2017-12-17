@@ -1,0 +1,136 @@
+@import "normalize";
+@import "layout";
+
+@font-face {
+    font-family: 'Flat';
+    src: url('../fonts/jf-flat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/jf-flat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+	font: 400 16.26px/1.8 Flat, sans-serif;
+	color:  #620808;
+	background-color: #f6704b;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 420px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+h2{
+	font-size: 24.01px;
+	font-weight: 400;
+	line-height: 2;
+	margin: 0;
+}
+
+.ba-accordion{
+	padding-top: 35px;
+	.ba-title{
+		padding: 30px 0 23px 108px ;
+		position: relative;
+		display: block;
+		cursor: pointer;
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+		}
+		&:hover{
+			box-shadow: 0 0 100px rgba(246, 112, 75, .4) inset;
+			}
+	}
+	.ba-content{
+		box-shadow: 0 0 16px rgba(0, 0, 0, .1) inset;
+		padding: 8px 0 11px 13px;
+	}
+	.ba-item{
+		&--location{
+			background-color:  #620808;
+			color:  #ffe9c1;
+			.ba-title:before{
+				background: url(../img/location.png) 6% 53% no-repeat;
+			}
+		}
+		&--music{
+			background-color:  #a53f3f;
+			color:  #f4ce74;
+			.ba-title:before{
+				background: url(../img/headphones.png) 6% 53% no-repeat;
+			}
+		}
+		&--notes{
+			background-color:  #f4ce74;
+			.ba-title:before{
+				background: url(../img/lightbulb.png) 6% 53% no-repeat;
+			}
+		}
+		&--books{
+			background-color:  #ffe9c1;
+			color:  #a53f3f;
+			.ba-title:before{
+				background: url(../img/bookmarks.png) 6% 53% no-repeat;
+			}
+		}
+		&--tendances{
+			background-color:  #d5441c;
+			color:  #ffe9c1;
+			.ba-title:before{
+				background: url(../img/lightning.png) 6% 53% no-repeat;
+			}
+		}
+	}
+
+
+}
